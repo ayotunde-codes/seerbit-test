@@ -1,0 +1,58 @@
+.card-container {
+  width: 30%;
+  margin-bottom: @marginBottom;
+  @media only screen and (max-width: @iPadPortraitBreakPoint) {
+    width: 45%;
+  }
+  @media only screen and (max-width: @mobileBreakPoint) {
+    width: 100%;
+  }
+  .top-area {
+    overflow: hidden !important;
+    width: 100%;
+    .product-image {
+      width: 100%;
+    }
+    &:hover {
+      transition: 0.5s ease-in-out;
+      .product-image {
+        filter: opacity(0.8) saturate(80%) contrast(120%) brightness(58%)
+          blur(3px);
+      }
+    }
+  }
+  .bottom-area {
+    padding: 0.4em 0;
+    .flex-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 0.3em;
+      .product-name {
+        color: @color-1;
+        font-size: 1.5em;
+        font-weight: 500;
+      }
+      .svg-cart {
+        // #black-red();
+        #black-green();
+        width: 1.4em;
+        cursor: pointer;
+      }
+      .svg {
+        width: 1.4em;
+        cursor: pointer;
+      }
+      .svg-heart {
+        // #black-red();
+        #black-purple();
+        width: 1.4em;
+        cursor: pointer;
+      }
+      .price {
+        color: @font-color-secondary;
+        font-size: 1.1em;
+      }
+    }
+  }
+}

@@ -1,0 +1,148 @@
+@import "assets/variables.less";
+@import "assets/footer.less";
+@import "assets/header.less";
+@import "assets/individualCard.less";
+
+.card-case {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.dark {
+  color: @color-1;
+}
+.margin-bottom {
+  margin-bottom: 0.4em;
+}
+.ipad-portrait-show-flex {
+  display: none !important;
+
+  @media only screen and (max-width: @iPadPortraitBreakPoint) {
+    display: flex !important;
+  }
+}
+
+.ipad-portrait-hide-flex {
+  display: flex !important;
+
+  @media only screen and (max-width: @iPadPortraitBreakPoint) {
+    display: none !important;
+  }
+}
+
+.ipad-portrait-show {
+  display: none !important;
+
+  @media only screen and (max-width: @iPadPortraitBreakPoint) {
+    display: block !important;
+  }
+}
+#hideScrollBar() {
+  &::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    appearance: none !important;
+    display: none !important;
+  }
+}
+.page-container {
+  max-width: 1265px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: @contentPaddingLeft;
+  padding-right: @contentPaddingLeft;
+
+  @media only screen and (max-width: 1400px) {
+    // padding-left: @contentPaddingLeft-1400;
+    // padding-right: @contentPaddingLeft-1400;
+  }
+
+  @media only screen and (max-width: @mobileBreakPoint) {
+    padding-left: @contentPaddingLeft-mobile;
+    padding-right: @contentPaddingLeft-mobile;
+  }
+}
+
+.ipad-portrait-hide {
+  display: block !important;
+
+  @media only screen and (max-width: @iPadPortraitBreakPoint) {
+    display: none !important;
+  }
+}
+
+.ipad-mini-show {
+  display: none !important;
+
+  @media only screen and (max-width: @iPadMiniBreakPoint) {
+    display: block !important;
+  }
+}
+
+.ipad-mini-hide {
+  display: block !important;
+
+  @media only screen and (max-width: @iPadMiniBreakPoint) {
+    display: none !important;
+  }
+}
+
+.mobile-show {
+  display: none !important;
+
+  @media only screen and (max-width: @mobileBreakPoint) {
+    display: block !important;
+  }
+}
+
+.mobile-show-flex {
+  display: none !important;
+
+  @media only screen and (max-width: @mobileBreakPoint) {
+    display: flex !important;
+  }
+}
+
+.mobile-hide {
+  display: block;
+
+  @media only screen and (max-width: @mobileBreakPoint) {
+    display: none !important;
+  }
+}
+
+html {
+  font-size: 16px; // <== body must have a predefined font size or some elements are going to go cucu
+
+  body {
+    padding-right: 0px !important;
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: inherit;
+    margin: auto;
+    line-height: 1.38;
+    box-sizing: border-box;
+    color: @font-color;
+
+    //   #customScrollBar();
+
+    * {
+      line-height: inherit;
+      box-sizing: border-box;
+      font-family: inherit;
+      // #customScrollBar(6px);
+
+      // &::first-letter {
+      //   text-transform: capitalize;
+      // }
+    }
+    .normal-weight {
+      font-weight: 400;
+    }
+
+    .bold-weight {
+      font-weight: bold;
+    }
+  }
+}
